@@ -1,3 +1,15 @@
+<?php
+session_start();
+include '../includes/db_connection.php';
+include '../classes/AdminAuth.php';
+
+$auth = new AdminAuth($conn);
+
+if (!$auth->isLoggedIn()) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

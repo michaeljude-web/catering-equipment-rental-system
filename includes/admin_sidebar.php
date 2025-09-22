@@ -75,7 +75,7 @@
                 </a>
             </li>
             <li class="nav-item mt-auto">
-                <a href="../logout.php" class="nav-link text-danger">
+                <a href="../admin/logout.php" class="nav-link text-danger">
                     <i class="fa-solid fa-right-from-bracket me-2"></i> Logout
                 </a>
             </li>
