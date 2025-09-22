@@ -1,66 +1,83 @@
-<aside class="w-16 sm:w-56 bg-white flex flex-col py-6 px-2 sm:px-4 shadow">
-  <div class="flex items-center gap-2 mb-8">
-    <div class="bg-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold">
-      EL
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow d-lg-none">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+    
+            <div class="bg-primary text-white fw-bold rounded d-flex align-items-center justify-content-center me-2" 
+                 style="width:40px; height:40px; font-size:18px;">
+                EL
+            </div>
+            <span class="fs-5 fw-semibold">Celio</span>
+        
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobileNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.php"><i class="fa-solid fa-gauge me-1"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="category.php"><i class="fa-solid fa-layer-group me-1"></i> Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="equipments.php"><i class="fa-solid fa-toolbox me-1"></i> Equipment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.php"><i class="fa-solid fa-calendar-check me-1"></i> Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reports.php"><i class="fa-solid fa-chart-line me-1"></i> Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="../logout.php"><i class="fa-solid fa-right-from-bracket me-1"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <span class="hidden sm:block font-semibold text-lg text-gray-700">
-      Cielo Catering
-    </span>
-  </div>
+</nav>
 
-  <nav class="flex flex-col gap-2 mt-2">
-    <a href="dashboard.php" class="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-50 text-gray-700">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="7" height="9" />
-        <rect x="14" y="3" width="7" height="5" />
-        <rect x="14" y="12" width="7" height="9" />
-        <rect x="3" y="16" width="7" height="5" />
-      </svg>
-      <span class="hidden sm:inline">Dashboard</span>
-    </a>
-
-    <a href="category.php" class="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-50 text-gray-700">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <circle cx="6.5" cy="6.5" r="4.5" />
-        <circle cx="17.5" cy="6.5" r="4.5" />
-        <circle cx="12" cy="17.5" r="4.5" />
-      </svg>
-      <span class="hidden sm:inline">Category</span>
-    </a>
-
-    <a href="equipments.php" class="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-50 text-gray-700">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <rect x="3" y="7" width="18" height="10" rx="2" />
-        <path d="M7 7V5a5 5 0 0 1 10 0v2" />
-      </svg>
-      <span class="hidden sm:inline">Equipment</span>
-    </a>
-
-    <a href="booking.php" class="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-50 text-gray-700">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <rect x="3" y="7" width="18" height="14" rx="2" />
-        <path d="M16 3v4M8 3v4" />
-        <path d="M3 11h18" />
-      </svg>
-      <span class="hidden sm:inline">Booking</span>
-    </a>
-
-    <a href="reports.php" class="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-50 text-gray-700">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M9 17v-6a2 2 0 0 1 4 0v6" />
-        <path d="M5 17v-2a2 2 0 0 1 4 0v2" />
-        <path d="M15 17v-4a2 2 0 0 1 4 0v4" />
-        <path d="M2 21h20" />
-      </svg>
-      <span class="hidden sm:inline">Reports</span>
-    </a>
-
-    <a href="/catering/src/admin/logout.php" class="flex items-center gap-3 py-2 px-2 rounded hover:bg-blue-100 text-red-600 mt-auto">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M17 16l4-4m0 0l-4-4m4 4H7" />
-        <rect x="3" y="4" width="8" height="16" rx="2" />
-      </svg>
-      <span class="hidden sm:inline">Logout</span>
-    </a>
-  </nav>
-</aside>
+<div class="d-flex min-vh-100">
+    <nav class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white shadow" style="width:220px;">
+        <div class="d-flex align-items-center mb-4">
+        
+            <div class="bg-primary text-white fw-bold rounded d-flex align-items-center justify-content-center me-2" 
+                 style="width:40px; height:40px; font-size:18px;">
+                EL
+            </div>
+            <span class="fs-5 fw-semibold">Cielo Catering</span>
+        
+        </div>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item mb-2">
+                <a href="dashboard.php" class="nav-link text-dark">
+                    <i class="fa-solid fa-gauge me-2"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="category.php" class="nav-link text-dark">
+                    <i class="fa-solid fa-layer-group me-2"></i> Category
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="equipments.php" class="nav-link text-dark">
+                    <i class="fa-solid fa-toolbox me-2"></i> Equipment
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="booking.php" class="nav-link text-dark">
+                    <i class="fa-solid fa-calendar-check me-2"></i> Booking
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="reports.php" class="nav-link text-dark">
+                    <i class="fa-solid fa-chart-line me-2"></i> Reports
+                </a>
+            </li>
+            <li class="nav-item mt-auto">
+                <a href="../logout.php" class="nav-link text-danger">
+                    <i class="fa-solid fa-right-from-bracket me-2"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
