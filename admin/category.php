@@ -13,7 +13,6 @@ if (!$auth->isLoggedIn()) {
 
 $categoryObj = new Category($conn);
 
-// === Add Category ===
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_category'])) {
     $category_name = trim($_POST['category_name']);
     if (!empty($category_name)) {
@@ -23,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_category'])) {
     exit();
 }
 
-// === Delete Category ===
 if (isset($_GET['delete'])) {
     $delete_id = intval($_GET['delete']);
     $categoryObj->deleteCategory($delete_id);
@@ -31,7 +29,6 @@ if (isset($_GET['delete'])) {
     exit();
 }
 
-// === Pagination Setup ===
 $limit = 9;
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int) $_GET['page'] : 1;
 
@@ -51,10 +48,8 @@ $categories = $categoryObj->getCategories($limit, $pagination->getOffset());
 </head>
 <body>
 
-<!-- Sidebar -->
 <?php include '../includes/admin_sidebar.php'; ?>
 
-<!-- Content -->
 <main class="flex-grow-1 p-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="h4">Category List</h1>
@@ -95,7 +90,6 @@ $categories = $categoryObj->getCategories($limit, $pagination->getOffset());
             </table>
         </div>
 
-        <!-- Pagination -->
         <?php if ($pagination->totalPages() > 1): ?>
         <div class="card-footer d-flex justify-content-between align-items-center flex-wrap">
             <small class="text-muted">
@@ -107,7 +101,6 @@ $categories = $categoryObj->getCategories($limit, $pagination->getOffset());
     </div>
 </main>
 
-<!-- Add Category Modal -->
 <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <form method="POST" class="modal-content">
